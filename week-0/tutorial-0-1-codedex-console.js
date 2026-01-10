@@ -16,7 +16,7 @@ console.log("Hello internet!");
 // Your favorite food
 // --------------------------------------------
 
-console.log("Anything from Terry Black's")
+console.log("Anything from Terry Black's");
 
 // --------------------------------------------
 // EXERCISE 3: LETTER TREE
@@ -66,13 +66,13 @@ console.log("7. Remove from heat and let rest for 5 minutes before serving.");
 // --------------------------------------------
 
 //Why are clothes so expensive
-console.log("==================================")
-console.log("         Abercrombie & Fitch")
-console.log("----------------------------------")
-console.log("           Order Details")
-console.log("----------------------------------")
-console.log("Item           Quantity    Price")
-console.log("Jeans             1        $500.00")
-console.log("----------------------------------")
-console.log("Total                      $500.00")
-console.log("==================================")
+console.log("==================================");
+console.log("         Abercrombie & Fitch");
+console.log("----------------------------------");
+console.log("           Order Details");
+console.log("----------------------------------");
+console.log("Item           Quantity    Price");
+console.log("Jeans             1        $500.00");
+console.log("----------------------------------");
+console.log("Total                      $500.00");
+console.log("==================================");
