@@ -18,8 +18,8 @@ listItems.forEach((item) => {
 //Searches HTML for <img> tags and stores it in the variable myImage
 const myImage = document.querySelector("img");
 
-// Waits for a click on the variable, when a click is recognized and the source image is the firefox-icon AND it's clicked on it changes to the image I uploaded.
-// Otherwise if it's the image I uploaded, it changes back to firefox-icon.png
+// Waits for a click on the variable, when a click is recognized and the source image is the Hands-1 AND it's clicked on it changes to the Hands-2 image
+// Otherwise if it's the image I uploaded, it changes back to Hands-1
 myImage.addEventListener("click", () => {
   const mySrc = myImage.getAttribute("src");
   if (mySrc === "images/Hands-1.png") {
@@ -71,3 +71,5 @@ function setUserName() {
 // This file does two things
 // 1. Changes the image when clicked, and changes it back to the original image when clicked again.
 // 2. Creates a welcome message in the header when a name is typed into the popup box, and remembers the user's name when refreshed.
+
+// The key pattern I've recognized is finding an element in the HTML, then setting up a function or something to add functionality to that element in the HTML. 
