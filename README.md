@@ -23,9 +23,44 @@ This is my workspace for **DESN 378 Code + Design 2** also known as **Web Design
 ## Learning Log
 
 Update this section each week with observations, breakthroughs, and questions.
+## Week 0
+​
+### What I Learned
+I learned what the concepts of what the pattern looks like to call back to elements in HTML from Javascript to add them to a function, and event listener. I also learned you can create functions instead of using the preset functions all the time. I understand the concepts of if, else statements, but I just need more practice typing them out and putting them to practice.
+​
+​
+### What Was Hard
+Often times it was just two lines of code conflicting with each other, but using AI to clear this stopgap really sped up the process.
+​
+​
+### How I Used AI
+I used Claude to help me troubleshoot my code by giving it my behavioral-layer files and having it identify conflictions in my code. I also used to to help me learn the code line by line. (I love Claude for coding)
+​
+​
+### What's Still Unclear
+I think I just need more repitition with the concepts taught in week 0 here, i.e. event listener, functions, setting inputs to local storage, or not doing so using "!" and so on.
+​
+​
+### Work Completed (Week 0)
+​
+**Engage**
+- [✅] Portfolio Audit
+​
+**Learn**
+- [✅] Console Explorer
+- [✅] Codedex Console Fundamentals
+​
+**Reflect**
+- [✅] Visual Notes: Variables and Strings
+​
+**Build**
+- [✅] The Setup
+- [✅] The Behavioral Layer
+​
+---
 
 ### Week 1: Systems That Respond
-*Coming soon...*
+
 
 ### Week 2: Remembering Choices
 *Coming soon...*
