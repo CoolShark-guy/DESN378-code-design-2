@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Crete Round", serif;
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.story-container { 
+    margin: 0 auto; 
+    max-width: 800px;
+    width: 90%;
+    text-align: center;
+}
+
+.story-image img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.story-image img:hover {
+    transform: scale(1.02);
+}
+
+.story-text {
+    margin-top: 30px;
+}
+
+#story-caption {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.story-progress {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #444;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #f0f0f0;
+}
