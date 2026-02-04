@@ -1,0 +1,70 @@
+/* Design Tokens — Fabian's Portfolio */
+
+/* ==================== */
+/* Color Tokens */
+/* ==================== */
+
+/* Primitives */
+:root {
+  --cyan: #4cc9f0;
+  --blue: #4361ee;
+  --purple: #3a0ca3;
+  --pink: #f72585;
+  --white: #ffffff;
+}
+
+/* Light mode (default) */
+:root {
+  --primary: var(--cyan);
+  --secondary-1: var(--blue);
+  --secondary-2: var(--purple);
+  --surface-border: var(--pink);
+  --text: var(--white);
+}
+
+/* Dark mode */
+body.dark {
+  --secondary-1: #6b6b7b;
+  --secondary-2: #373240;
+  --primary: #b0bcc0;
+  --surface-border: #928085;
+  --text: #ffffff;
+}
+
+/* ==================== */
+/* Typography Tokens */
+/* ==================== */
+
+:root {
+  --font-family-primary: Barlow;
+  --font-family-secondary: Montserrat;
+  
+  --text-size-h1: 96px;
+  --text-size-h2: 54px;
+  --text-size-body: 32px;
+  --text-size-nav: 25px;
+  --text-size-footer: 19px;
+  
+  --text-weight-bold: 700;
+  --text-weight-nav: 600;
+  --text-weight-body: 300;
+  
+  --line-height-h1: 120%;
+  --line-height-h2: 62px;
+  --line-height-body: 45px;
+  --line-height-nav: 30px;
+  --line-height-footer: 22px;
+}
+
+/* ==================== */
+/* Spacing Tokens */
+/* ==================== */
+
+:root {
+  --space-xs: 15px;
+  --space-s: 25px;
+  --space-m: 35px;
+  --space-l: 45px;
+  --space-xl: 55px;
+  --space-xxl: 65px;
+}
