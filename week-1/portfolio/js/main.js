@@ -1,10 +1,22 @@
-const toggle = document.querySelector(".theme-toggle");
+// Load saved theme on page load
+const savedTheme = localStorage.getItem('theme');
 
-// Initialize the page in light mode
-document.body.classList.add("light");
+if (savedTheme) {
+  document.documentElement.dataset.theme = savedTheme;
+}
 
-// Listen for clicks
-toggle.addEventListener("click", function () {
-  // Toggle the dark class on body
-  document.body.classList.toggle("dark");
+const toggle = document.querySelector('.theme-toggle');
+
+toggle.addEventListener('click', function() {
+  const currentTheme = document.documentElement.dataset.theme;
+
+  let newTheme;
+  if (currentTheme === 'dark') {
+    newTheme = 'light';
+  } else {
+    newTheme = 'dark';
+  }
+
+  document.documentElement.dataset.theme = newTheme;
+  localStorage.setItem('theme', newTheme);
 });

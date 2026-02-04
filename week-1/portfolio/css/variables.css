@@ -23,7 +23,7 @@
 }
 
 /* Dark mode */
-body.dark {
+[data-theme="dark"] {
   --secondary-1: #6b6b7b;
   --secondary-2: #373240;
   --primary: #b0bcc0;
