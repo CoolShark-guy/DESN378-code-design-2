@@ -19,34 +19,129 @@
 
   <body>
     <header>
-        <nav id="navbar">
-          <div class="nav-link-box">
-            <a class="nav-link" href="#about">About</a>
-          </div>
-          <div class="nav-link-box">
-            <a class="nav-link" href="#projects">Work</a>
-          </div>
-          <div class="nav-link-box">
-            <a class="nav-link" href="#contact">Contact</a>
-          </div>
-        </nav>
-
-        <div class="theme-toggle-group">
-          <button class="theme-btn" data-theme-value="light" aria-label="Switch to light mode">Light</button>
-          <button class="theme-btn" data-theme-value="dark" aria-label="Switch to dark mode">Dark</button>
-          <button class="theme-btn" data-theme-value="system" aria-label="Switch to system mode">System</button>
+      <nav id="navbar">
+        <div class="nav-link-box">
+          <a class="nav-link" href="#about">About</a>
+        </div>
+        <div class="nav-link-box">
+          <a class="nav-link" href="#projects">Work</a>
+        </div>
+        <div class="nav-link-box">
+          <a class="nav-link" href="#contact">Contact</a>
         </div>
 
-        <section id="welcome-section">
-          <div class="welcome-title">
-            <h1>Welcome!</h1>
+        <!-- ===================== -->
+        <!-- Theme Dropdown        -->
+        <!-- ===================== -->
+        <div class="theme-dropdown">
+
+          <!-- Trigger button — shows current theme icon -->
+          <button
+            class="theme-trigger"
+            aria-label="Toggle theme menu"
+            aria-expanded="false"
+          >
+            <!-- Sun SVG — JS will swap this icon based on active theme -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+            >
+              <circle class="sun" cx="12" cy="12" r="4" />
+              <line class="rays" x1="12" y1="4" x2="12" y2="0" />
+              <line class="rays" x1="20" y1="12" x2="24" y2="12" />
+              <line class="rays" x1="12" y1="24" x2="12" y2="20" />
+              <line class="rays" x1="4" y1="12" x2="0" y2="12" />
+              <line class="rays" x1="18" y1="6" x2="20" y2="4" />
+              <line class="rays" x1="6" y1="6" x2="4" y2="4" />
+              <line class="rays" x1="6" y1="18" x2="4" y2="20" />
+              <line class="rays" x1="18" y1="18" x2="20" y2="20" />
+            </svg>
+            <span>Theme</span>
+          </button>
+
+          <!-- Dropdown menu -->
+          <div class="theme-menu">
+
+            <!-- Light option -->
+            <button
+              class="theme-option"
+              data-theme-value="light"
+              aria-label="Switch to light mode"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+              >
+                <circle class="sun" cx="12" cy="12" r="4" />
+                <line class="rays" x1="12" y1="4" x2="12" y2="0" />
+                <line class="rays" x1="20" y1="12" x2="24" y2="12" />
+                <line class="rays" x1="12" y1="24" x2="12" y2="20" />
+                <line class="rays" x1="4" y1="12" x2="0" y2="12" />
+                <line class="rays" x1="18" y1="6" x2="20" y2="4" />
+                <line class="rays" x1="6" y1="6" x2="4" y2="4" />
+                <line class="rays" x1="6" y1="18" x2="4" y2="20" />
+                <line class="rays" x1="18" y1="18" x2="20" y2="20" />
+              </svg>
+              <span>Light</span>
+            </button>
+
+            <!-- Dark option -->
+            <button
+              class="theme-option"
+              data-theme-value="dark"
+              aria-label="Switch to dark mode"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+              >
+                <circle class="backgroundCircle" cx="12" cy="12" r="11" />
+                <circle class="moonCircle" cx="12" cy="12" r="8" />
+                <circle class="cutoutCircle" cx="16" cy="12" r="5" />
+              </svg>
+              <span>Dark</span>
+            </button>
+
+            <!-- System option -->
+            <button
+              class="theme-option"
+              data-theme-value="system"
+              aria-label="Switch to system mode"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+              >
+                <rect class="monitor" x="2" y="2" width="20" height="14" rx="2" />
+                <rect class="monitor" id="monitorStand" x="8" y="16" width="8" height="4" rx="1" />
+                <line class="base" x1="4" y1="20" x2="20" y2="20" />
+              </svg>
+              <span>System</span>
+            </button>
+
           </div>
-          <div class="welcome-name">
-            <p class="small-text">My name is...</p><br>
-            <h2>Fabian Meza-Cera</h2>
-          </div>
-        </section>
-      </header>
+        </div>
+
+      </nav>
+
+      <section id="welcome-section">
+        <div class="welcome-title">
+          <h1>Welcome!</h1>
+        </div>
+        <div class="welcome-name">
+          <p class="small-text">My name is...</p><br>
+          <h2>Fabian Meza-Cera</h2>
+        </div>
+      </section>
+    </header>
 
     <section id="about">
       <img src="https://i.imgur.com/5nEpfev.png" class="about-image" alt="personal-icon">
@@ -60,9 +155,8 @@
     </section>
 
     <section id="projects">
-
-        <img src="https://i.imgur.com/jjK9k9B.png" class="projects-background-1" alt="breaking-background-1">
-        <img src="https://i.imgur.com/jjK9k9B.png" class="projects-background-2" alt="breaking-background-2">
+      <img src="https://i.imgur.com/jjK9k9B.png" class="projects-background-1" alt="breaking-background-1">
+      <img src="https://i.imgur.com/jjK9k9B.png" class="projects-background-2" alt="breaking-background-2">
 
       <div class="project-card-container">
         <img src="https://i.imgur.com/T5AvG0n.png" class="project-img" alt="survey-form-img"/>
@@ -70,7 +164,6 @@
           <img src="https://i.imgur.com/WeYL4Ex.png" class="project-frame" alt="survey-form-frame">
         </a>
       </div>
-
 
       <div class="project-card-container">
         <img src="https://i.imgur.com/9NoC2Nq.png" class="project-img" alt="tribute-page-img"/>
@@ -93,29 +186,26 @@
         </a>
       </div>
 
-      <div class="project-tile">
-      </div> 
+      <div class="project-tile"></div>
     </section>
 
     <section id="reflections">
       <h2>Reflection</h2>
-      <p>This quarter I learned a lot about what I love to do creatively and what I wanna do in the future as a designer. I’d love to pursue Web Development, 3D animation, or Game Design! Heck maybe even all of them. I learned I don’t wanna just make stuff that looks cool I wanna make stuff that looks cool and makes people FEEL.</p>
+      <p>This quarter I learned a lot about what I love to do creatively and what I wanna do in the future as a designer. I'd love to pursue Web Development, 3D animation, or Game Design! Heck maybe even all of them. I learned I don't wanna just make stuff that looks cool I wanna make stuff that looks cool and makes people FEEL.</p>
     </section>
 
-      <footer id="contact">
+    <footer id="contact">
       <hr class="footer-separator">
-      
       <div class="github-container">
         <a href="https://github.com/CoolShark-guy" id="profile-link" target="_blank"><h3>Profile</h3></a>
       </div>
-
       <hr class="footer-separator">
-        
       <div class="copyright-container">
         <img src="https://i.imgur.com/vHbNNTf.png" alt="copyright-icon">
         <h3>FabianMeza-Cera</h3>
       </div>
     </footer>
+
     <script src="js/main.js"></script>
   </body>
 </html>

@@ -1,20 +1,22 @@
 const savedTheme = localStorage.getItem('theme');
 
-if (savedTheme) {
+if (savedTheme === 'light' || savedTheme === 'dark') {
   document.documentElement.dataset.theme = savedTheme;
 } else {
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   document.documentElement.dataset.theme = prefersDark ? 'dark' : 'light';
 }
 
-const themeButtons = document.querySelectorAll('.theme-btn');
+const trigger = document.querySelector('.theme-trigger');
+const dropdown = document.querySelector('.theme-dropdown');
+const themeButtons = document.querySelectorAll('.theme-option');
 
 themeButtons.forEach(function(button) {
   button.addEventListener('click', function() {
     const value = button.dataset.themeValue;
 
     if (value === 'system') {
-      localStorage.removeItem('theme');
+      localStorage.setItem('theme', 'system');
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       document.documentElement.dataset.theme = prefersDark ? 'dark' : 'light';
     } else {
@@ -22,10 +24,38 @@ themeButtons.forEach(function(button) {
       document.documentElement.dataset.theme = value;
     }
 
+    // Update active state on click
+    themeButtons.forEach(function(btn) {
+      if (btn.dataset.themeValue === localStorage.getItem('theme')) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+
     updateFrames(document.documentElement.dataset.theme);
     updateBackgrounds(document.documentElement.dataset.theme);
     updateIsland(document.documentElement.dataset.theme);
+
+    // Close the menu after selecting
+    dropdown.classList.remove('open');
   });
+});
+
+trigger.addEventListener('click', function() {
+  dropdown.classList.toggle('open');
+
+  if (dropdown.classList.contains('open')) {
+    trigger.setAttribute('aria-expanded', 'true');
+  } else {
+    trigger.setAttribute('aria-expanded', 'false');
+  }
+});
+
+document.addEventListener('click', function(e) {
+  if (!dropdown.contains(e.target)) {
+    dropdown.classList.remove('open');
+  }
 });
 
 const frames = document.querySelectorAll('.project-frame');
